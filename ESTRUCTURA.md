@@ -17,7 +17,7 @@ WEB PUBLIRUN/
     └── vallas.png                 # Imagen sección Servicios
 ```
 
-##  Ubicación Estratégica de los Logos
+## 🎯 Ubicación Estratégica de los Logos
 
 ### Logo Pequeño (`Logo Publirun png.png`)
 **Ubicación**: Header (barra superior)
@@ -55,19 +55,19 @@ WEB PUBLIRUN/
 - ✨ **Profesional**: Diseño limpio y moderno
 
 ### Hero (Logo Grande)
--  **Impacto inmediato**: Lo primero que ven los visitantes
--  **Reconocimiento de marca**: Logo destacado
--  **Jerarquía visual**: Llama la atención correctamente
+- 🚀 **Impacto inmediato**: Lo primero que ven los visitantes
+- 🚀 **Reconocimiento de marca**: Logo destacado
+- 🚀 **Jerarquía visual**: Llama la atención correctamente
 
 ### Nosotros (Logo Flotante)
--  **Refuerzo de identidad**: Recordatorio visual
--  **Diseño dinámico**: Animación sutil
--  **Contexto**: Asocia la historia con la marca
+- 💼 **Refuerzo de identidad**: Recordatorio visual
+- 💼 **Diseño dinámico**: Animación sutil
+- 💼 **Contexto**: Asocia la historia con la marca
 
 ### Footer (Logo Grande)
--  **Cierre memorable**: Última impresión
--  **Acceso rápido**: Navegación hacia arriba
--  **Consistencia**: Mantiene presencia de marca
+- 🎯 **Cierre memorable**: Última impresión
+- 🎯 **Acceso rápido**: Navegación hacia arriba
+- 🎯 **Consistencia**: Mantiene presencia de marca
 
 ## 📐 Especificaciones Técnicas
 
@@ -99,7 +99,7 @@ Formato: PNG transparente
 - [x] Animaciones suaves
 - [x] Optimización de carga
 
-##  Cómo Usar
+## 🚀 Cómo Usar
 
 1. **Mantener estructura de carpetas**:
    - Todos los archivos HTML/CSS/JS en raíz
@@ -113,7 +113,7 @@ Formato: PNG transparente
    - Solo abrir `index.html` en navegador
    - Todo funcionará automáticamente
 
-##  Personalización Futura
+## 🎨 Personalización Futura
 
 Si quieres cambiar los logos:
 1. Reemplaza los archivos en `assets/`
@@ -121,7 +121,7 @@ Si quieres cambiar los logos:
 3. Usa formato PNG con transparencia
 4. El sitio se actualizará automáticamente
 
-##  Tips Profesionales
+## 💡 Tips Profesionales
 
 - ✅ Los logos tienen sombras sutiles para profundidad
 - ✅ Las animaciones son suaves (no mareantes)
