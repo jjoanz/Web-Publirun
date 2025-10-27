@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publirun - Guía Rápida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #003057 0%, #004a7f 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo img {
+            max-width: 300px;
+            height: auto;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #FF6B35;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .btn-main {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px 40px;
+            background: #FF6B35;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+        .btn-main:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+            background: #ff8c5a;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #FF6B35;
+        }
+        .info-box h3 {
+            color: #FF6B35;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .info-box p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+        ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .btn-main {
+                font-size: 1.1rem;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/Logo 1 Publirun.png" alt="Publirun">
+        </div>
+        
+        <h1>🎉 ¡Tu Sitio Web Está Listo!</h1>
+        <p class="subtitle">Sitio profesional de Publirun - Publicidad Exterior</p>
+        
+        <a href="index.html" class="btn-main">🚀 ABRIR SITIO WEB</a>
+        
+        <div class="info-box">
+            <h3>📁 Estructura de Archivos</h3>
+            <p>Todos los archivos están organizados y listos para usar:</p>
+            <ul>
+                <li><strong>index.html</strong> - Página principal (¡abre este!)</li>
+                <li><strong>styles.css</strong> - Estilos profesionales</li>
+                <li><strong>script.js</strong> - Funcionalidades interactivas</li>
+                <li><strong>assets/</strong> - Carpeta con todos los logos e imágenes</li>
+            </ul>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <strong>Diseño Profesional</strong>
+                <p>Colores corporativos de Publirun</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <strong>100% Responsive</strong>
+                <p>Funciona en todos los dispositivos</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <strong>Súper Rápido</strong>
+                <p>Carga instantánea</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <strong>Animaciones</strong>
+                <p>Efectos suaves y profesionales</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>🎯 Logos Estratégicamente Ubicados</h3>
+            <ul>
+                <li><strong>Logo Pequeño</strong> en el header (siempre visible)</li>
+                <li><strong>Logo Grande</strong> en el hero (primera impresión)</li>
+                <li><strong>Logo Flotante</strong> en sección Nosotros</li>
+                <li><strong>Logo Grande</strong> en el footer (cierre profesional)</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>📞 Contactos Configurados</h3>
+            <ul>
+                <li><strong>Teléfono:</strong> 809-560-2700</li>
+                <li><strong>WhatsApp:</strong> +1 (829) 421-5058</li>
+                <li><strong>Email:</strong> info@publirun.com</li>
+                <li><strong>Ubicación:</strong> Santo Domingo, RD</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>📚 Archivos de Documentación</h3>
+            <ul>
+                <li><strong>README.md</strong> - Guía completa de uso</li>
+                <li><strong>ESTRUCTURA.md</strong> - Explicación de archivos y logos</li>
+                <li><strong>PUBLIRUN-Website-Complete.zip</strong> - Todo en un archivo</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="btn-main">🌟 VER EL SITIO AHORA</a>
+
+        <div class="footer-note">
+            <p><strong>Desarrollado con ❤️ para Publirun</strong></p>
+            <p>HTML5 • CSS3 • JavaScript</p>
+            <p>© 2025 - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
