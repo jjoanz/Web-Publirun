@@ -348,7 +348,7 @@ const galleryImages = [
         description: 'Diseño e instalación completa en ubicación estratégica'
     },
     {
-        src: 'https://images.unsplash.com/photo-1551361415-69c87624334a?w=1920&q=80',
+        src: 'https://i.postimg.cc/q76j2S6P/Neon-Black-Friday-Editable-Text-Effect.jpg',
         title: 'Rótulo LED Luminoso',
         description: 'Letras corporativas iluminadas de alta calidad'
     },
