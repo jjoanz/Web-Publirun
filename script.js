@@ -343,13 +343,13 @@ let currentLightboxIndex = 0;
 
 const galleryImages = [
     {
-        src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80',
+        src: 'assets/Galeria/Vallas/Valla 1.png',
         title: 'Valla Publicitaria Premium',
         description: 'Diseño e instalación completa en ubicación estratégica'
     },
+    
     {
-        src: 'https://i.postimg.cc/q76j2S6P/Neon-Black-Friday-Editable-Text-Effect.jpg',
-        title: 'Rótulo LED Luminoso',
+        src: 'asValla Publicitaria Premium',
         description: 'Letras corporativas iluminadas de alta calidad'
     },
     {
