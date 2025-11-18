@@ -280,6 +280,7 @@
     </section>
 
     <!-- Galería Section -->
+<!-- Galería Section -->
 <section class="gallery" id="galeria">
     <div class="container">
         <div class="section-header">
@@ -340,10 +341,10 @@
 
             <!-- ROTULOS (3,4,5) -->
             <div class="gallery-item" data-category="rotulos">
-                <img src="https://i.postimg.cc/q76j2S6P/Neon-Black-Friday-Editable-Text-Effect.jpg" alt="Rótulo LED">
+                <img src="assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_5357.jpg" alt="Rótulo Cristalería Acropolis">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h3>Rótulo LED Luminoso</h3>
+                        <h3>Rótulo Cristalería</h3>
                         <button class="gallery-view-btn" onclick="openLightbox(3)">
                             <i class="fas fa-search-plus"></i> Ver más
                         </button>
@@ -452,6 +453,25 @@
         </div>
     </div>
 </section>
+
+
+<!-- ============= LIGHTBOX COMPLETO ============= -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightbox-img" alt="Imagen ampliada">
+
+        <div class="lightbox-caption">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-desc"></p>
+        </div>
+    </div>
+
+    <button class="lightbox-prev" onclick="prevImage(event)">&lsaquo;</button>
+    <button class="lightbox-next" onclick="nextImage(event)">&rsaquo;</button>
+</div>
+
 
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">

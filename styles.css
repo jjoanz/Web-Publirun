@@ -952,7 +952,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.92); /* más elegante */
     z-index: 9999;
     display: none;
     align-items: center;
@@ -975,40 +975,47 @@ section {
     align-items: center;
 }
 
+/* Mantengo EXACTAMENTE lo que tenías, solo mejoro detalle visual */
 .lightbox-content img {
     max-width: 100%;
     max-height: 75vh;
     object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 12px; /* más profesional */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55); /* sombra más suave */
+    transition: transform 0.25s ease;
+}
+
+.lightbox-content img:hover {
+    transform: scale(1.01);
 }
 
 .lightbox-caption {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px 30px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    padding: 18px 26px;
+    border-radius: 12px;
     margin-top: 20px;
     text-align: center;
     color: var(--light-color);
 }
 
 .lightbox-caption h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 1.7rem;
+    margin-bottom: 8px;
     color: var(--secondary-color);
 }
 
 .lightbox-caption p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     opacity: 0.9;
 }
 
+/* BOTONES */
 .lightbox-close,
 .lightbox-prev,
 .lightbox-next {
     position: fixed;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(10px);
     color: var(--light-color);
     border: none;
@@ -1017,7 +1024,7 @@ section {
     border-radius: 50%;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: 0.25s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1055,6 +1062,47 @@ section {
 .lightbox-next:hover {
     transform: translateY(-50%) scale(1.1);
 }
+
+/* ================================
+   CAPTION MEJORADO (TÍTULO + DESCRIPCIÓN)
+   ================================ */
+
+.lightbox-caption {
+    background: rgba(15, 15, 15, 0.55);
+    padding: 22px 30px;
+    border-radius: 14px;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    width: 100%;
+    max-width: 700px;
+    animation: fadeUp 0.3s ease;
+}
+
+.lightbox-caption h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    color: #f75e06; /* profesional, elegante */
+    text-transform: uppercase;
+}
+
+.lightbox-caption p {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    opacity: 0.9;
+    color: #f1f1f1;
+}
+
+/* Animación suave del caption */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 
 /* ================================
    CLIENTS SECTION

@@ -350,7 +350,7 @@ const galleryImages = [
     { src: 'assets/Galeria/Vallas/valla 3.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
 
     // ROTULOS (3–5)
-    { src: 'https://i.postimg.cc/q76j2S6P/Neon-Black-Friday-Editable-Text-Effect.jpg', title: 'Rótulo LED Luminoso', description: 'Letras corporativas iluminadas' },
+    { src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_5357.jpg', title: 'Rótulo Acropolis', description: 'Letras corporativas iluminadas' },
     { src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80', title: 'Rótulo Comercial', description: 'Fachada completa con iluminación LED' },
     { src: 'https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80', title: 'Rótulo Moderno', description: 'Diseño moderno profesional' },
 
