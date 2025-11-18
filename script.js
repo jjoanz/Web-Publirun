@@ -341,73 +341,44 @@ filterBtns.forEach(btn => {
 // Lightbox Functionality
 let currentLightboxIndex = 0;
 
+// ARRAY COMPLETO – 3 IMÁGENES POR CATEGORÍA
 const galleryImages = [
-    {
-        src: 'assets/Galeria/Vallas/Valla 1.png',
-        title: 'Valla Publicitaria Premium',
-        description: 'Diseño e instalación completa en ubicación estratégica'
-    },
-    
-    {
-        src: 'asValla Publicitaria Premium',
-        description: 'Letras corporativas iluminadas de alta calidad'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80',
-        title: 'Rotulación Vehicular',
-        description: 'Vinilo de alta calidad con diseño personalizado'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1563906267088-b029e7101114?w=1920&q=80',
-        title: 'Valla Digital LED',
-        description: 'Tecnología de última generación para publicidad dinámica'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&q=80',
-        title: 'Stand para Eventos',
-        description: 'Diseño personalizado y montaje profesional'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80',
-        title: 'Rótulo Comercial',
-        description: 'Fachada completa con iluminación LED'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80',
-        title: 'Campaña Publicitaria',
-        description: 'Múltiples ubicaciones estratégicas en la ciudad'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=1920&q=80',
-        title: 'Flota Corporativa',
-        description: 'Diseño uniforme para toda la flota empresarial'
-    },
-    {
-        src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80',
-        title: 'Banners para Eventos',
-        description: 'Impresión gran formato de alta resolución'
-    }
+
+    // VALLAS (0–2)
+    { src: 'assets/Galeria/Vallas/Valla 1.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
+    { src: 'assets/Galeria/Vallas/Valla 2.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
+    { src: 'assets/Galeria/Vallas/valla 3.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
+
+    // ROTULOS (3–5)
+    { src: 'https://i.postimg.cc/q76j2S6P/Neon-Black-Friday-Editable-Text-Effect.jpg', title: 'Rótulo LED Luminoso', description: 'Letras corporativas iluminadas' },
+    { src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80', title: 'Rótulo Comercial', description: 'Fachada completa con iluminación LED' },
+    { src: 'https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80', title: 'Rótulo Moderno', description: 'Diseño moderno profesional' },
+
+    // VEHICULOS (6–8)
+    { src: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80', title: 'Rotulación Vehicular', description: 'Vinilo de alta calidad' },
+    { src: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=1920&q=80', title: 'Flota Corporativa', description: 'Diseño uniforme empresarial' },
+    { src: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1920&q=80', title: 'Vehículo Publicitario', description: 'Publicidad móvil de alto impacto' },
+
+    // EVENTOS (9–11)
+    { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&q=80', title: 'Stand para Eventos', description: 'Diseño personalizado y montaje profesional' },
+    { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80', title: 'Banners para Eventos', description: 'Impresión gran formato de alta resolución' },
+    { src: 'https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=1920&q=80', title: 'Evento Corporativo', description: 'Escenografía y branding completo' }
 ];
 
+// 🔍 ABRIR LIGHTBOX
 function openLightbox(index) {
-    currentLightboxIndex = index;
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxDescription = document.getElementById('lightbox-description');
-    
-    lightboxImg.src = galleryImages[index].src;
-    lightboxTitle.textContent = galleryImages[index].title;
-    lightboxDescription.textContent = galleryImages[index].description;
-    
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    const imgData = galleryImages[index];
+
+    document.getElementById('lightbox-img').src = imgData.src;
+    document.getElementById('lightbox-title').textContent = imgData.title;
+    document.getElementById('lightbox-desc').textContent = imgData.description;
+
+    document.getElementById('lightbox').classList.add('active');
 }
 
+// ❌ CERRAR LIGHTBOX
 function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    document.getElementById('lightbox').classList.remove('active');
 }
 
 function changeLightboxImage(direction) {
