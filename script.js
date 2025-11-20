@@ -107,7 +107,7 @@ animateElements.forEach(el => {
 // Form Submission
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
+//contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Get form data
@@ -119,7 +119,7 @@ contactForm.addEventListener('submit', (e) => {
     
     // Reset form
     contactForm.reset();
-});
+//});
 
 // Counter Animation for Numbers
 const animateCounter = (element, target, duration) => {
