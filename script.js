@@ -344,26 +344,102 @@ let currentLightboxIndex = 0;
 // ARRAY COMPLETO – 3 IMÁGENES POR CATEGORÍA
 const galleryImages = [
 
+    // =======================
     // VALLAS (0–2)
-    { src: 'assets/Galeria/Vallas/Valla 1.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
-    { src: 'assets/Galeria/Vallas/Valla 2.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
-    { src: 'assets/Galeria/Vallas/valla 3.png', title: 'Valla Publicitaria Premium', description: 'Diseño e instalación completa' },
+    // =======================
+    { 
+        src: 'assets/Galeria/Vallas/Valla 1.png', 
+        title: 'Valla Publicitaria Premium', 
+        description: 'Valla publicitaria instalada con diseño profesional y materiales de alta durabilidad.' 
+    },
+    { 
+        src: 'assets/Galeria/Vallas/Valla 2.png', 
+        title: 'Valla Publicitaria Premium', 
+        description: 'Valla publicitaria de alto impacto visual, ideal para campañas exteriores.' 
+    },
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_7466.jpg', 
+        title: 'Valla Publicitaria', 
+        description: 'Estructura publicitaria instalada estratégicamente para máxima visibilidad.' 
+    },
 
-    // ROTULOS (3–5)
-    { src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_5357.jpg', title: 'Rótulo Acropolis', description: 'Letras corporativas iluminadas' },
-    { src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80', title: 'Rótulo Comercial', description: 'Fachada completa con iluminación LED' },
-    { src: 'https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80', title: 'Rótulo Moderno', description: 'Diseño moderno profesional' },
+    // =======================
+    // RÓTULOS (3–5)
+    // =======================
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_9331.jpg', 
+        title: 'Rótulo Comercial Vehicular', 
+        description: 'Rótulo aplicado sobre vehículo con acabado profesional y resistencia a la intemperie.' 
+    },
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/DJI_20250410040719_0038_D.jpg', 
+        title: 'Rótulo Comercial', 
+        description: 'Instalación de rótulo comercial con iluminación LED y estructura reforzada.' 
+    },
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMPRESION.jpg', 
+        title: 'Rótulo Moderno', 
+        description: 'Diseño y fabricación de rótulo moderno con acabados limpios y elegantes.' 
+    },
 
-    // VEHICULOS (6–8)
-    { src: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80', title: 'Rotulación Vehicular', description: 'Vinilo de alta calidad' },
-    { src: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=1920&q=80', title: 'Flota Corporativa', description: 'Diseño uniforme empresarial' },
-    { src: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1920&q=80', title: 'Vehículo Publicitario', description: 'Publicidad móvil de alto impacto' },
-
-    // EVENTOS (9–11)
-    { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&q=80', title: 'Stand para Eventos', description: 'Diseño personalizado y montaje profesional' },
-    { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80', title: 'Banners para Eventos', description: 'Impresión gran formato de alta resolución' },
-    { src: 'https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=1920&q=80', title: 'Evento Corporativo', description: 'Escenografía y branding completo' }
+    // =======================
+    // LETREROS (6–8)
+    // =======================
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_4948.jpg', 
+        title: 'Letras en Pared', 
+        description: 'Instalación de letras corporativas en pared, fabricadas en materiales premium.' 
+    },
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_8351 2.jpg', 
+        title: 'Letrero Promocional', 
+        description: 'Letrero promocional diseñado para captar la atención y reforzar la identidad visual.' 
+    },
+    { 
+        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/Imagen 4-6-25 a las 11.25 p. m.jpg', 
+        title: 'Letrero Corporativo en la Pared', 
+        description: 'Letrero corporativo instalado en pared, ideal para oficinas o ambientes comerciales.' 
+    }
 ];
+
+
+// ===============================
+// SISTEMA DE LIGHTBOX
+// ===============================
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+    currentIndex = index;
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxTitle = document.getElementById("lightbox-title");
+    const lightboxDesc = document.getElementById("lightbox-description");
+
+    const item = galleryImages[index];
+
+    lightboxImg.src = item.src;
+    lightboxTitle.textContent = item.title;
+    lightboxDesc.textContent = item.description;
+
+    lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    openLightbox(currentIndex);
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    openLightbox(currentIndex);
+}
+
 
 // 🔍 ABRIR LIGHTBOX
 function openLightbox(index) {
