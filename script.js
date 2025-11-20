@@ -108,17 +108,17 @@ animateElements.forEach(el => {
 const contactForm = document.getElementById('contactForm');
 
 //contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+   // e.preventDefault();
     
     // Get form data
-    const formData = new FormData(contactForm);
+ //   const formData = new FormData(contactForm);
     
     // Here you would typically send the data to a server
     // For now, we'll just show a success message
-    alert('¡Gracias por contactarnos! Nos comunicaremos contigo pronto.');
+   // alert('¡Gracias por contactarnos! Nos comunicaremos contigo pronto.');
     
     // Reset form
-    contactForm.reset();
+  //  contactForm.reset();
 //});
 
 // Counter Animation for Numbers
