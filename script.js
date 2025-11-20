@@ -105,7 +105,7 @@ animateElements.forEach(el => {
 });
 
 // Form Submission
-const contactForm = document.getElementById('contactForm');
+//const contactForm = document.getElementById('contactForm');
 
 //contactForm.addEventListener('submit', (e) => {
    // e.preventDefault();
@@ -118,7 +118,7 @@ const contactForm = document.getElementById('contactForm');
    // alert('¡Gracias por contactarnos! Nos comunicaremos contigo pronto.');
     
     // Reset form
-  //  contactForm.reset();
+  //7  contactForm.reset();
 //});
 
 // Counter Animation for Numbers
