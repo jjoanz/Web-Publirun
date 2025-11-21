@@ -725,69 +725,88 @@
     </section>
 
     <!-- Contacto Section -->
-    <section class="contact" id="contactos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contáctanos</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info-section">
-                    <h3>Información de Contacto</h3>
+    <!-- FORMULARIO CORREGIDO PARA NETLIFY -->
+<section class="contact" id="contactos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info-section">
+                <h3>Información de Contacto</h3>
 
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Dirección</h4>
-                            <p>Santo Domingo, República Dominicana</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <div>
-                            <h4>WhatsApp</h4>
-                            <p>(809) 684-4143</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@publirun.com</p>
-                        </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Santo Domingo, República Dominicana</p>
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <h3>Envíanos un Mensaje</h3>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>(809) 684-4143</p>
+                    </div>
+                </div>
 
-                    <!-- FORMULARIO NETLIFY OFICIAL -->
-                    <form name="contacto" netlify>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@publirun.com</p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="form-group">
-                            <input type="text" name="nombre" placeholder="Nombre" required>
-                        </div>
+            <div class="contact-form">
+                <h3>Envíanos un Mensaje</h3>
 
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
+                <!-- FORMULARIO NETLIFY CON ATRIBUTOS NECESARIOS -->
+                <form 
+                    name="contacto" 
+                    method="POST" 
+                    data-netlify="true" 
+                    netlify-honeypot="bot-field"
+                    action="/gracias.html"
+                >
+                    <!-- Campo oculto requerido por Netlify -->
+                    <input type="hidden" name="form-name" value="contacto">
+                    
+                    <!-- Honeypot para anti-spam -->
+                    <p style="display: none;">
+                        <label>No llenes esto si eres humano: <input name="bot-field"></label>
+                    </p>
 
-                        <div class="form-group">
-                            <input type="tel" name="telefono" placeholder="Teléfono">
-                        </div>
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                    </div>
 
-                        <div class="form-group">
-                            <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
-                        </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
 
-                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
-                    </form>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder="Teléfono">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+
+                <!-- Mensaje de confirmación (opcional) -->
+                <div id="form-success" style="display: none; margin-top: 20px; padding: 15px; background: #4CAF50; color: white; border-radius: 5px;">
+                    ¡Gracias por contactarnos! Nos comunicaremos contigo pronto.
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
