@@ -350,36 +350,36 @@ const galleryImages = [
     { 
         src: 'assets/Galeria/Vallas/Valla 1.png', 
         title: 'Valla Publicitaria Premium', 
-        description: 'Valla publicitaria instalada con diseño profesional y materiales de alta durabilidad.' 
+        description: 'Valla publicitaria en estructura metálica, diseñada para máxima exposición en exteriores.'
     },
     { 
         src: 'assets/Galeria/Vallas/Valla 2.png', 
         title: 'Valla Publicitaria Premium', 
-        description: 'Valla publicitaria de alto impacto visual, ideal para campañas exteriores.' 
+        description: 'Valla de gran formato con impresión de alta calidad para campañas de alto impacto.'
     },
     { 
         src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_7466.jpg', 
         title: 'Valla Publicitaria', 
-        description: 'Estructura publicitaria instalada estratégicamente para máxima visibilidad.' 
+        description: 'Instalación profesional en ubicación estratégica para lograr amplia visibilidad.'
     },
 
     // =======================
     // RÓTULOS (3–5)
     // =======================
     { 
-        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_9331.jpg', 
+        src: 'assets/Galeria/Rotulaciones/Imagen de WhatsApp 2025-06-26 a las 14.15.43_ea9f153d.jpg', 
         title: 'Rótulo Comercial Vehicular', 
-        description: 'Rótulo aplicado sobre vehículo con acabado profesional y resistencia a la intemperie.' 
+        description: 'Rotulación vehicular profesional con materiales resistentes al sol y la intemperie.'
     },
     { 
-        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/DJI_20250410040719_0038_D.jpg', 
+        src: 'assets/Galeria/Rotulaciones/Imagen de WhatsApp 2025-06-26 a las 14.15.50_dc0a9f15.jpg', 
         title: 'Rótulo Comercial', 
-        description: 'Instalación de rótulo comercial con iluminación LED y estructura reforzada.' 
+        description: 'Rótulo impreso para fachada comercial con colores vibrantes y gran durabilidad.'
     },
     { 
-        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMPRESION.jpg', 
+        src: 'assets/Galeria/Rotulaciones/IMG_4715.jpg', 
         title: 'Rótulo Moderno', 
-        description: 'Diseño y fabricación de rótulo moderno con acabados limpios y elegantes.' 
+        description: 'Rótulo moderno con acabado limpio, ideal para negocios que buscan destacar.'
     },
 
     // =======================
@@ -388,19 +388,40 @@ const galleryImages = [
     { 
         src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_4948.jpg', 
         title: 'Letras en Pared', 
-        description: 'Instalación de letras corporativas en pared, fabricadas en materiales premium.' 
+        description: 'Letras corpóreas instaladas en pared, elaboradas en materiales premium.'
     },
     { 
-        src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/IMG_8351 2.jpg', 
+        src: 'assets/Galeria/Letreros/Letrero 1.png', 
         title: 'Letrero Promocional', 
-        description: 'Letrero promocional diseñado para captar la atención y reforzar la identidad visual.' 
+        description: 'Letrero promocional diseñado para destacar productos o servicios de manera visual.'
     },
     { 
         src: 'assets/Galeria/FOTO UTILIZADAS EN EL PORTAFOLIO/Imagen 4-6-25 a las 11.25 p. m.jpg', 
         title: 'Letrero Corporativo en la Pared', 
-        description: 'Letrero corporativo instalado en pared, ideal para oficinas o ambientes comerciales.' 
+        description: 'Letrero corporativo montado en pared, perfecto para oficinas y áreas de recepción.'
+    },
+
+    // =======================
+    // MATERIALES PROMOCIONALES (9–11)
+    // =======================
+    { 
+        src: 'assets/Galeria/Materiales Promosionales/PHOTO-2025-04-18-16-24-10 2.jpg', 
+        title: 'Material Promocional', 
+        description: 'Material promocional personalizado ideal para eventos y activaciones de marca.'
+    },
+    { 
+        src: 'assets/Galeria/Materiales Promosionales/PHOTO-2025-04-18-16-24-10.jpg', 
+        title: 'Material Promocional', 
+        description: 'Artículos personalizados diseñados para reforzar la identidad visual de la marca.'
+    },
+    { 
+        src: 'assets/Galeria/Materiales Promosionales/PHOTO-2025-04-18-16-24-11.jpg', 
+        title: 'Artículos Promocionales Impresos', 
+        description: 'Material impreso de alta calidad ideal para campañas publicitarias y promocionales.'
     }
+
 ];
+
 
 
 // ===============================
