@@ -1,0 +1,455 @@
+{
+  "site": {
+    "name": "Publirun",
+    "slogan": "Hacemos visible tu marca",
+    "url": "https://publirun.com",
+    "logoHeader": "/media/logo-header-1600.webp",
+    "logoMain": "/media/logo-publirun-1600.webp",
+    "whatsapp": "18096844143",
+    "whatsappLabel": "+1 (809) 684-4143",
+    "email": "info@publirun.com",
+    "address": "Calle Francisco Villaespesa #236, Villa Juana, Santo Domingo, R.D.",
+    "social": {
+      "instagram": "https://www.instagram.com/publirun/",
+      "facebook": "",
+      "tiktok": "",
+      "linkedin": "",
+      "twitter": "",
+      "youtube": ""
+    },
+    "seo": {
+      "title": "Publirun | Publicidad Exterior, Vallas, Letreros e Impresión Gran Formato en Santo Domingo",
+      "description": "Publirun es una empresa de publicidad en Santo Domingo, República Dominicana: vallas publicitarias, letreros comerciales, rotulación vehicular, impresión gran formato, señalética corporativa y montaje de eventos.",
+      "keywords": [
+        "Publirun",
+        "taller publicitario",
+        "taller publicitario Santo Domingo",
+        "empresa de publicidad en Santo Domingo",
+        "publicidad exterior República Dominicana",
+        "publicidad exterior RD",
+        "vallas publicitarias Santo Domingo",
+        "impresión gran formato Santo Domingo",
+        "rotulación vehicular República Dominicana",
+        "rotulación de vehículos",
+        "letreros comerciales Santo Domingo",
+        "fabricación de letreros",
+        "señalética corporativa",
+        "impresión de banners",
+        "montaje de eventos Santo Domingo",
+        "rótulos comerciales",
+        "letras corpóreas",
+        "material POP"
+      ],
+      "text": "Publirun es un taller publicitario y empresa de publicidad en Santo Domingo. Hacemos publicidad exterior en toda la República Dominicana: vallas publicitarias, fabricación de letreros y letreros comerciales, rotulación vehicular y rotulación de vehículos de flotas, impresión gran formato e impresión de banners, señalética corporativa y montaje de eventos en Santo Domingo."
+    }
+  },
+  "hero": {
+    "videoDesktop": "/media/hero-publirun-cuadrado.mp4",
+    "videoMobile": "/media/hero-publirun-vertical.mp4",
+    "posterDesktop": "/media/hero-poster-cuadrado-1600.webp",
+    "posterMobile": "/media/hero-poster-vertical-1600.webp",
+    "loop": false,
+    "background": "#e4e3e7",
+    "badge": "PUBLIRUN",
+    "title": "Hacemos visible tu marca",
+    "buttons": [
+      {
+        "text": "Solicitar Cotización",
+        "link": "#contactos",
+        "style": "primary"
+      },
+      {
+        "text": "Conocer Más",
+        "link": "#nosotros",
+        "style": "secondary"
+      }
+    ]
+  },
+  "about": {
+    "visible": true,
+    "navLabel": "Nosotros",
+    "kicker": "Conoce más sobre",
+    "title": "*QUIÉNES* SOMOS",
+    "intro": "Somos una agencia dedicada a ofrecer una amplia gama de servicios que abarcan desde impresiones de alta calidad hasta el diseño de líneas gráficas corporativas.",
+    "paragraphs": [
+      "Con un enfoque centrado en la excelencia y la creatividad, nos especializamos en proporcionar soluciones integrales para tus necesidades de marketing y comunicación. Además, ofrecemos servicios de organización y gestión de eventos, asegurando que cada ocasión sea memorable y exitosa.",
+      "En nuestra empresa, nos comprometemos a superar las expectativas de nuestros clientes, brindando resultados excepcionales y un servicio personalizado en cada proyecto."
+    ],
+    "pillars": [
+      {
+        "icon": "fa-lightbulb",
+        "title": "Visión",
+        "text": "Ser una empresa líder en el mercado para satisfacer las necesidades de nuestros clientes."
+      },
+      {
+        "icon": "fa-bullseye",
+        "title": "Misión",
+        "text": "Ser reconocidos como la principal agencia que brinda variedad de servicios desde impresión hasta eventos con alta calidad y precios competitivos."
+      },
+      {
+        "icon": "fa-heart",
+        "title": "Valores",
+        "text": "Responsabilidad, colaboración, empatía, mejora continua, integridad, lealtad y respeto."
+      }
+    ],
+    "cardText": "Cada proyecto en *Publirun* es una oportunidad para *hacer visible tu marca*. Con nuestras vallas, rotulaciones, impresiones y confección de letreros, damos forma a tus ideas, creando piezas únicas que capturan la esencia de tu visión para compartirla con el mundo.",
+    "cardImage": "/media/nosotros-fondo-1600.webp"
+  },
+  "products": {
+    "visible": true,
+    "navLabel": "Productos",
+    "kicker": "",
+    "title": "Nuestros Productos",
+    "subtitle": "Soluciones completas para tu publicidad exterior",
+    "items": [
+      {
+        "icon": "fa-bullhorn",
+        "title": "Vallas Publicitarias",
+        "text": "Estructuras de gran formato para máxima visibilidad en ubicaciones estratégicas."
+      },
+      {
+        "icon": "fa-store",
+        "title": "Rótulos Comerciales",
+        "text": "Identificación perfecta para tu negocio con iluminación LED y diseños personalizados."
+      },
+      {
+        "icon": "fa-truck",
+        "title": "Rotulación Vehicular",
+        "text": "Convierte tu flota en publicidad móvil con diseños impactantes."
+      },
+      {
+        "icon": "fa-print",
+        "title": "Impresión Gran Formato",
+        "text": "Banners, lonas, vinilos y más con la mejor calidad de impresión."
+      },
+      {
+        "icon": "fa-signs-post",
+        "title": "Señalética",
+        "text": "Sistemas de orientación e información para espacios comerciales e industriales."
+      },
+      {
+        "icon": "fa-rectangle-ad",
+        "title": "Letreros",
+        "text": "Letreros personalizados en diversos materiales, diseñados para destacar tu marca con calidad y estilo. Fabricación e instalación profesional para interiores y exteriores."
+      }
+    ]
+  },
+  "services": {
+    "visible": true,
+    "navLabel": "Servicios",
+    "kicker": "Lo que ofrecemos",
+    "title": "NUESTROS *SERVICIOS*",
+    "subtitle": "Toca cada área para ver todo lo que hacemos.",
+    "areas": [
+      {
+        "title": "Publicidad Exterior",
+        "icon": "fa-bullhorn",
+        "description": "Visibilidad de alto impacto en las calles y avenidas de todo el país.",
+        "items": [
+          "Vallas publicitarias",
+          "Vallas digitales",
+          "Letreros",
+          "Rótulos comerciales",
+          "Rotulación vehicular"
+        ],
+        "image": "/media/servicio-publicidad-exterior-1600.webp"
+      },
+      {
+        "title": "Producción & Impresión",
+        "icon": "fa-print",
+        "description": "Impresión y confección con materiales de calidad para cualquier formato.",
+        "items": [
+          "Gran formato",
+          "Banners",
+          "Vinilos",
+          "Lonas",
+          "Material POP",
+          "Textiles",
+          "Serigrafía",
+          "Bordado",
+          "Artículos promocionales"
+        ],
+        "image": "/media/servicio-produccion-impresion-1600.webp"
+      },
+      {
+        "title": "Branding & Señalización",
+        "icon": "fa-pen-nib",
+        "description": "Identidad visual coherente, desde tu logo hasta cada pared de tu espacio.",
+        "items": [
+          "Diseño gráfico",
+          "Identidad visual",
+          "Señalética",
+          "Branding de espacios",
+          "Señalización corporativa"
+        ],
+        "image": "/media/servicio-branding-1600.webp"
+      },
+      {
+        "title": "Eventos & Experiencias",
+        "icon": "fa-calendar-check",
+        "description": "Montamos y producimos experiencias que la gente recuerda.",
+        "items": [
+          "Organización de eventos",
+          "Activaciones",
+          "Montajes",
+          "Producción",
+          "Cobertura audiovisual",
+          "Experiencias de marca"
+        ],
+        "image": "/media/servicio-eventos-1600.webp"
+      }
+    ]
+  },
+  "gallery": {
+    "visible": true,
+    "navLabel": "Galería",
+    "kicker": "Nuestros Proyectos",
+    "title": "*GALERÍA* DE TRABAJOS",
+    "subtitle": "Descubre algunos de nuestros proyectos más destacados",
+    "categories": [
+      {
+        "id": "vallas",
+        "name": "Vallas"
+      },
+      {
+        "id": "rotulos",
+        "name": "Rótulos"
+      },
+      {
+        "id": "vehiculos",
+        "name": "Rotulación vehicular"
+      },
+      {
+        "id": "letreros",
+        "name": "Letreros"
+      },
+      {
+        "id": "espacios",
+        "name": "Branding de espacios"
+      },
+      {
+        "id": "promocionales",
+        "name": "Material promocional"
+      }
+    ],
+    "items": [
+      {
+        "category": "vallas",
+        "title": "Valla Publicitaria Premium",
+        "description": "Valla publicitaria en estructura metálica, diseñada para máxima exposición en exteriores.",
+        "image": "/media/galeria-valla-1-1600.webp"
+      },
+      {
+        "category": "vallas",
+        "title": "Valla Publicitaria Premium",
+        "description": "Valla de gran formato con impresión de alta calidad para campañas de alto impacto.",
+        "image": "/media/galeria-valla-2-1600.webp"
+      },
+      {
+        "category": "vallas",
+        "title": "Valla Publicitaria",
+        "description": "Instalación profesional en ubicación estratégica para lograr amplia visibilidad.",
+        "image": "/media/galeria-valla-3-1600.webp"
+      },
+      {
+        "category": "rotulos",
+        "title": "Rótulos en Edificio",
+        "description": "Rótulos de fachada con materiales resistentes al sol y la intemperie.",
+        "image": "/media/galeria-rotulo-1-1600.webp"
+      },
+      {
+        "category": "rotulos",
+        "title": "Rótulo Comercial",
+        "description": "Rótulo para fachada comercial con colores vibrantes y gran durabilidad.",
+        "image": "/media/galeria-rotulo-2-1600.webp"
+      },
+      {
+        "category": "rotulos",
+        "title": "Fachada Rotulada",
+        "description": "Rotulación completa de fachada para máxima presencia de marca.",
+        "image": "/media/galeria-rotulo-3-1600.webp"
+      },
+      {
+        "category": "vehiculos",
+        "title": "Rotulación de Flota",
+        "description": "Rotulación vehicular completa: tu flota convertida en publicidad móvil.",
+        "image": "/media/galeria-vehiculo-1-1600.webp"
+      },
+      {
+        "category": "vehiculos",
+        "title": "Camión Rotulado",
+        "description": "Vinil de alta resistencia para vehículos de distribución.",
+        "image": "/media/galeria-vehiculo-2-1600.webp"
+      },
+      {
+        "category": "vehiculos",
+        "title": "Rotulación de Camión",
+        "description": "Diseño e instalación de rotulación en caja de camión.",
+        "image": "/media/galeria-vehiculo-3-1600.webp"
+      },
+      {
+        "category": "letreros",
+        "title": "Letras en Pared",
+        "description": "Letras corpóreas instaladas en pared, elaboradas en materiales premium.",
+        "image": "/media/galeria-letrero-1-1600.webp"
+      },
+      {
+        "category": "letreros",
+        "title": "Letrero Promocional",
+        "description": "Letrero promocional diseñado para destacar productos o servicios de manera visual.",
+        "image": "/media/galeria-letrero-2-1600.webp"
+      },
+      {
+        "category": "letreros",
+        "title": "Letrero Corporativo en la Pared",
+        "description": "Letrero corporativo montado en pared, perfecto para oficinas y áreas de recepción.",
+        "image": "/media/galeria-letrero-3-1600.webp"
+      },
+      {
+        "category": "espacios",
+        "title": "Branding de Oficinas",
+        "description": "Frases y gráficos de gran formato que dan vida a los espacios de trabajo.",
+        "image": "/media/galeria-espacio-1-1600.webp"
+      },
+      {
+        "category": "espacios",
+        "title": "Vinil Esmerilado",
+        "description": "Vinil decorativo en puertas y paredes de vidrio.",
+        "image": "/media/galeria-espacio-2-1600.webp"
+      },
+      {
+        "category": "espacios",
+        "title": "Mural Impreso",
+        "description": "Impresión de gran formato aplicada en pared.",
+        "image": "/media/galeria-espacio-3-1600.webp"
+      },
+      {
+        "category": "promocionales",
+        "title": "Material Promocional",
+        "description": "Material promocional personalizado ideal para eventos y activaciones de marca.",
+        "image": "/media/galeria-promocional-1-1600.webp"
+      },
+      {
+        "category": "promocionales",
+        "title": "Material Promocional",
+        "description": "Artículos personalizados diseñados para reforzar la identidad visual de la marca.",
+        "image": "/media/galeria-promocional-2-1600.webp"
+      },
+      {
+        "category": "promocionales",
+        "title": "Artículos Promocionales Impresos",
+        "description": "Material impreso de alta calidad ideal para campañas publicitarias y promocionales.",
+        "image": "/media/galeria-promocional-3-1600.webp"
+      }
+    ],
+    "portfolioFile": "/media/publirun-portafolio.pdf",
+    "portfolioLabel": "Ver portafolio de servicios"
+  },
+  "clients": {
+    "visible": true,
+    "navLabel": "Clientes",
+    "title": "Nuestros Clientes",
+    "subtitle": "Confían en nosotros",
+    "speed": 40,
+    "logos": [
+      {
+        "name": "Prodesa",
+        "image": "/media/cliente-prodesa-1600.webp"
+      },
+      {
+        "name": "Casa de España",
+        "image": "/media/cliente-casa-espana-1600.webp"
+      },
+      {
+        "name": "Chef",
+        "image": "/media/cliente-chef-1600.webp"
+      },
+      {
+        "name": "Acrópolis",
+        "image": "/media/cliente-acropolis-1600.webp"
+      },
+      {
+        "name": "Hired Experts",
+        "image": "/media/cliente-hired-experts-1600.webp"
+      },
+      {
+        "name": "Initium",
+        "image": "/media/cliente-initium-1600.webp"
+      },
+      {
+        "name": "AC Hotels Marriott",
+        "image": "/media/cliente-ac-hotels-1600.webp"
+      },
+      {
+        "name": "Gatorade",
+        "image": "/media/cliente-gatorade-1600.webp"
+      },
+      {
+        "name": "Constructora Santana Medrano",
+        "image": "/media/cliente-santana-medrano-1600.webp"
+      },
+      {
+        "name": "Casaducho",
+        "image": "/media/cliente-casaducho-1600.webp"
+      },
+      {
+        "name": "Asociación La Nacional",
+        "image": "/media/cliente-la-nacional-1600.webp"
+      },
+      {
+        "name": "Making Waves",
+        "image": "/media/cliente-making-waves-1600.webp"
+      },
+      {
+        "name": "Hidrolágeno",
+        "image": "/media/cliente-hidrolageno-1600.webp"
+      },
+      {
+        "name": "Invita Energy",
+        "image": "/media/cliente-invita-1600.webp"
+      },
+      {
+        "name": "YAO",
+        "image": "/media/cliente-yao-1600.webp"
+      },
+      {
+        "name": "Paseo del Sendero",
+        "image": "/media/cliente-paseo-sendero-1600.webp"
+      },
+      {
+        "name": "Petronan",
+        "image": "/media/cliente-petronan-1600.webp"
+      },
+      {
+        "name": "Instituto Cultural Domínico Americano",
+        "image": "/media/cliente-dominico-americano-1600.webp"
+      },
+      {
+        "name": "Urban Group",
+        "image": "/media/cliente-urban-group-1600.webp"
+      }
+    ]
+  },
+  "instagram": {
+    "visible": true,
+    "kicker": "Lo más reciente",
+    "title": "Síguenos en *Instagram*",
+    "handle": "publirun",
+    "count": 6,
+    "manualPosts": []
+  },
+  "contact": {
+    "visible": true,
+    "navLabel": "Contactos",
+    "title": "Contáctanos",
+    "infoTitle": "Información de Contacto",
+    "formTitle": "Envíanos un Mensaje"
+  },
+  "footer": {
+    "copyright": "© {año} Publirun. Todos los derechos reservados."
+  },
+  "meta": {
+    "updatedAt": "2026-10-19T00:53:00.102Z",
+    "updatedBy": "seed"
+  }
+}
