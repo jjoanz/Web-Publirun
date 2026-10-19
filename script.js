@@ -143,14 +143,17 @@ function renderServices(c) {
     const tabs = $('#serviceTabs');
     const panel = $('#servicePanel');
     tabs.innerHTML = areas.map((a, i) => `
-        <button class="service-tab" role="tab" id="stab-${i}" aria-controls="servicePanel" aria-selected="${i === 0}" data-i="${i}">
+        <button class="service-tab" role="tab" id="stab-${i}" aria-controls="servicePanel" aria-selected="${i === 0}" data-i="${i}" style="order:${i * 2}">
             <span class="service-num">${String(i + 1).padStart(2, '0')}</span>
             <i class="fas ${escapeHtml(a.icon || 'fa-star')}"></i>
             <span class="service-name">${escapeHtml(a.title)}</span>
+            <i class="fas fa-chevron-down service-chev" aria-hidden="true"></i>
         </button>`).join('');
-    const show = (i) => {
+    const show = (i, fromTap) => {
         const a = areas[i];
         if (!a) { panel.innerHTML = ''; return; }
+        // En celular el detalle se abre justo debajo del botón tocado (acordeón).
+        panel.style.setProperty('--panel-order', String(i * 2 + 1));
         $$('.service-tab', tabs).forEach((t, j) => t.setAttribute('aria-selected', String(j === i)));
         panel.setAttribute('aria-labelledby', `stab-${i}`);
         panel.innerHTML = `
@@ -165,8 +168,12 @@ function renderServices(c) {
         panel.classList.remove('swap');
         void panel.offsetWidth;
         panel.classList.add('swap');
+        if (fromTap && window.matchMedia('(max-width: 768px)').matches) {
+            const btn = $(`#stab-${i}`);
+            window.scrollTo({ top: btn.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 12, behavior: 'smooth' });
+        }
     };
-    tabs.onclick = (e) => { const b = e.target.closest('.service-tab'); if (b) show(Number(b.dataset.i)); };
+    tabs.onclick = (e) => { const b = e.target.closest('.service-tab'); if (b) show(Number(b.dataset.i), true); };
     tabs.onkeydown = (e) => {
         if (!['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(e.key)) return;
         const btns = $$('.service-tab', tabs);
@@ -210,10 +217,21 @@ function renderGallery(c) {
     draw('all');
 }
 
+let pagesTimer = null;
 function renderClients(c) {
     const cl = c.clients || {};
     const logos = (cl.logos || []).filter(l => l.image);
     const box = $('#clientsMarquee');
+    const pages = $('#clientsPages');
+    clearInterval(pagesTimer);
+    if (cl.style === 'cartel' && logos.length) {
+        box.hidden = true;
+        pages.hidden = false;
+        renderLogoPages(logos, pages);
+        return;
+    }
+    box.hidden = false;
+    pages.hidden = true;
     if (!logos.length) { box.innerHTML = ''; return; }
     const item = (l, hidden) => `<li class="client-circle"${hidden ? ' aria-hidden="true"' : ''}>${img(l.image, hidden ? '' : l.name, { sizes: '160px' })}</li>`;
     // Dos copias seguidas para que la cinta sea continua.
@@ -222,31 +240,107 @@ function renderClients(c) {
     box.innerHTML = `<ul class="marquee-track">${row}</ul>`;
 }
 
-async function renderInstagram(c) {
+// Logos en cuadrícula gris por páginas, con puntos (estilo cartel.com.do).
+function renderLogoPages(logos, root) {
+    let page = 0;
+    let perPage = 0;
+    const go = (p) => {
+        const strip = $('.logo-strip', root);
+        const dots = $$('.logo-dots button', root);
+        if (!strip) return;
+        page = ((p % Math.max(1, dots.length)) + Math.max(1, dots.length)) % Math.max(1, dots.length);
+        strip.style.transform = `translateX(-${page * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === page));
+    };
+    const build = () => {
+        const w = window.innerWidth;
+        const cols = w <= 576 ? 3 : w <= 992 ? 4 : 7;
+        const per = cols * 2;
+        if (per === perPage && root.childElementCount) return;
+        perPage = per;
+        const count = Math.ceil(logos.length / per);
+        page = Math.min(page, count - 1);
+        root.style.setProperty('--logo-cols', cols);
+        root.innerHTML = `<div class="logo-viewport"><div class="logo-strip">${Array.from({ length: count }, (_, p) =>
+            `<ul class="logo-page">${logos.slice(p * per, p * per + per).map(l => `<li>${img(l.image, l.name, { sizes: '180px' })}</li>`).join('')}</ul>`).join('')}</div></div>` +
+            (count > 1 ? `<div class="logo-dots">${Array.from({ length: count }, (_, p) => `<button aria-label="Página ${p + 1} de clientes" data-p="${p}"></button>`).join('')}</div>` : '');
+        go(page);
+    };
+    const auto = () => { clearInterval(pagesTimer); pagesTimer = setInterval(() => go(page + 1), 5000); };
+    root.onclick = (e) => { const d = e.target.closest('[data-p]'); if (d) { go(Number(d.dataset.p)); auto(); } };
+    let sx = null;
+    root.ontouchstart = (e) => { sx = e.touches[0].clientX; };
+    root.ontouchend = (e) => {
+        if (sx === null) return;
+        const dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 40) { go(page + (dx < 0 ? 1 : -1)); auto(); }
+        sx = null;
+    };
+    window.addEventListener('resize', build);
+    build();
+    auto();
+}
+
+async function getInstagramPosts(c) {
     const ig = c.instagram || {};
-    if (ig.visible === false) return;
-    const handle = String(ig.handle || '').replace(/^@/, '');
-    const profile = (c.site.social && c.site.social.instagram) || (handle ? `https://www.instagram.com/${handle}/` : '');
-    const follow = $('#instaFollow');
-    follow.href = safeLink(profile);
-    follow.querySelector('span').textContent = handle ? `Seguir a @${handle}` : 'Ver Instagram';
     let posts = [];
     if (mediaBase) {
         try { posts = (await fetchJson(`${CMS_URL}/api/instagram`, 5000)).posts || []; } catch { /* sin conexión: publicaciones manuales */ }
     }
     if (!posts.length) posts = (ig.manualPosts || []).filter(p => p.image).map(p => ({ ...p, image: media(p.image), manual: true }));
-    posts = posts.slice(0, Math.max(1, Number(ig.count) || 6));
-    const grid = $('#instaGrid');
-    if (!posts.length) {
-        grid.innerHTML = `<p class="insta-empty">Mira nuestros trabajos más recientes en Instagram.</p>`;
-        return;
-    }
-    grid.innerHTML = posts.map(p => `
-        <a class="insta-post reveal" href="${escapeHtml(safeLink(p.link || profile))}" target="_blank" rel="noopener" aria-label="${escapeHtml(p.caption ? p.caption.slice(0, 80) : 'Publicación de Instagram')}">
+    return posts;
+}
+
+function instaProfile(c) {
+    const ig = c.instagram || {};
+    const handle = String(ig.handle || '').replace(/^@/, '');
+    return { handle, url: (c.site.social && c.site.social.instagram) || (handle ? `https://www.instagram.com/${handle}/` : '') };
+}
+
+function instaTile(p, profileUrl) {
+    return `
+        <a class="insta-post reveal" href="${escapeHtml(safeLink(p.link || profileUrl))}" target="_blank" rel="noopener" aria-label="${escapeHtml(p.caption ? p.caption.slice(0, 80) : 'Publicación de Instagram')}">
             <img src="${escapeHtml(p.image)}" alt="" loading="lazy" decoding="async"${p.manual ? '' : ' referrerpolicy="no-referrer"'}>
             ${p.isVideo ? '<i class="fas fa-play insta-video"></i>' : ''}
             <span class="insta-hover"><i class="fab fa-instagram"></i></span>
-        </a>`).join('');
+        </a>`;
+}
+
+// En Nosotros: últimas publicaciones en el lugar de la tarjeta (si hay menos de 3, queda la tarjeta).
+function renderAboutInstagram(c, posts) {
+    const a = c.about || {};
+    const box = $('#aboutInsta');
+    const card = $('#aboutCard');
+    const use = a.visual !== 'card' && posts.length >= 3;
+    box.hidden = !use;
+    card.hidden = use;
+    $('.about-visual').classList.toggle('with-insta', use);
+    if (!use) return;
+    const { handle, url } = instaProfile(c);
+    const list = posts.slice(0, posts.length >= 6 ? 6 : 3);
+    box.innerHTML = `
+        <a class="about-insta-head" href="${escapeHtml(safeLink(url))}" target="_blank" rel="noopener">
+            <span class="about-insta-icon"><i class="fab fa-instagram"></i></span>
+            <span class="about-insta-name"><strong>${escapeHtml(handle ? '@' + handle : 'Instagram')}</strong><small>Lo más reciente</small></span>
+            <span class="about-insta-follow">Seguir</span>
+        </a>
+        <div class="about-insta-grid">${list.map(p => instaTile(p, url)).join('')}</div>`;
+    observeReveal();
+}
+
+async function renderInstagram(c) {
+    const ig = c.instagram || {};
+    const posts = await getInstagramPosts(c);
+    renderAboutInstagram(c, posts);
+    if (ig.visible === false) return;
+    const { handle, url } = instaProfile(c);
+    const follow = $('#instaFollow');
+    follow.href = safeLink(url);
+    follow.querySelector('span').textContent = handle ? `Seguir a @${handle}` : 'Ver Instagram';
+    const list = posts.slice(0, Math.max(1, Number(ig.count) || 6));
+    $('#instaGrid').innerHTML = list.length
+        ? list.map(p => instaTile(p, url)).join('')
+        : `<p class="insta-empty">Mira nuestros trabajos más recientes en Instagram.</p>`;
     observeReveal();
 }
 

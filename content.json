@@ -93,7 +93,8 @@
       }
     ],
     "cardText": "Cada proyecto en *Publirun* es una oportunidad para *hacer visible tu marca*. Con nuestras vallas, rotulaciones, impresiones y confección de letreros, damos forma a tus ideas, creando piezas únicas que capturan la esencia de tu visión para compartirla con el mundo.",
-    "cardImage": "/media/nosotros-fondo-1600.webp"
+    "cardImage": "/media/nosotros-fondo-1600.webp",
+    "visual": "instagram"
   },
   "products": {
     "visible": true,
@@ -428,10 +429,11 @@
         "name": "Urban Group",
         "image": "/media/cliente-urban-group-1600.webp"
       }
-    ]
+    ],
+    "style": "circulos"
   },
   "instagram": {
-    "visible": true,
+    "visible": false,
     "kicker": "Lo más reciente",
     "title": "Síguenos en *Instagram*",
     "handle": "publirun",
@@ -449,7 +451,7 @@
     "copyright": "© {año} Publirun. Todos los derechos reservados."
   },
   "meta": {
-    "updatedAt": "2026-10-19T00:53:00.102Z",
-    "updatedBy": "seed"
+    "updatedAt": "2026-10-19T01:14:18.887Z",
+    "updatedBy": "jjoanz0618@gmail.com"
   }
 }

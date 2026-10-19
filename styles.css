@@ -114,7 +114,9 @@ main > section, .footer { transition: opacity .4s ease; }
 .menu-toggle {
     display: none;
     flex-direction: column; gap: 5px;
-    background: none; border: none; cursor: pointer; padding: 8px;
+    justify-content: center; align-items: center;
+    background: none; border: none; cursor: pointer;
+    width: 46px; height: 46px; padding: 0;
 }
 .menu-toggle span { width: 28px; height: 3px; background: var(--light-color); border-radius: 3px; transition: var(--transition); }
 .menu-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
@@ -360,7 +362,11 @@ section { padding: 100px 0; position: relative; }
     background: var(--secondary-color); border-radius: 50%; filter: blur(120px); opacity: .18;
     pointer-events: none;
 }
-.service-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 34px; position: relative; }
+/* Los botones y el detalle comparten una cuadrícula: en computadora el detalle va debajo de los 4 botones;
+   en celular se coloca justo debajo del botón tocado (acordeón). */
+.service-box { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; position: relative; }
+.service-tabs { display: contents; }
+.service-tab .service-chev { display: none; }
 .service-tab {
     position: relative;
     display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
@@ -387,6 +393,9 @@ section { padding: 100px 0; position: relative; }
 .service-tab:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
 .service-panel {
+    grid-column: 1 / -1;
+    order: 999;
+    margin-top: 16px;
     display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -561,6 +570,43 @@ section { padding: 100px 0; position: relative; }
     .client-circle[aria-hidden="true"] { display: none; }
 }
 
+/* Logos por páginas (estilo cartel) */
+.logo-pages { --logo-cols: 7; }
+.logo-viewport { overflow: hidden; }
+.logo-strip { display: flex; transition: transform .7s cubic-bezier(.4, 0, .2, 1); }
+.logo-page {
+    flex: 0 0 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(var(--logo-cols), 1fr);
+    gap: 34px 30px;
+    align-content: start;
+    padding: 10px 0;
+}
+.logo-page li { height: 90px; display: flex; align-items: center; justify-content: center; }
+.logo-page img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(100%); opacity: .65; transition: filter .3s, opacity .3s; }
+.logo-page li:hover img { filter: none; opacity: 1; }
+.logo-dots { display: flex; justify-content: center; gap: 4px; margin-top: 30px; }
+.logo-dots button { width: 32px; height: 32px; border: 0; background: none; cursor: pointer; position: relative; }
+.logo-dots button::after { content: ''; position: absolute; inset: 0; margin: auto; width: 12px; height: 12px; border-radius: 50%; background: #cfd3d8; transition: background .3s; }
+.logo-dots button.active::after { background: var(--secondary-color); }
+
+/* Instagram dentro de Nosotros */
+.about-insta { background: var(--light-color); border-radius: 20px; box-shadow: var(--shadow-lg); padding: 22px; }
+.about-insta-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; color: inherit; text-decoration: none; }
+.about-insta-icon {
+    width: 48px; height: 48px; border-radius: 50%; flex: none;
+    display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.about-insta-name { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.3; }
+.about-insta-name strong { color: var(--primary-color); }
+.about-insta-name small { color: var(--gray-color); }
+.about-insta-follow { background: var(--secondary-color); color: #fff; font-weight: 600; padding: 8px 18px; border-radius: 30px; font-size: .9rem; }
+.about-insta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.about-insta-grid .insta-post { border-radius: 10px; }
+.about-visual.with-insta .about-logo-float { display: none; }
+
 /* ================================
    INSTAGRAM
    ================================ */
@@ -696,7 +742,7 @@ a.contact-item:hover { transform: translateX(8px); box-shadow: var(--shadow-md);
 @media (max-width: 1200px) {
     .container { padding: 0 25px; }
     .nav-list { gap: 24px; }
-    .service-tabs { grid-template-columns: repeat(2, 1fr); }
+    .service-box { grid-template-columns: repeat(2, 1fr); }
     .footer-content { grid-template-columns: 1fr 1fr; }
 }
 
@@ -735,9 +781,16 @@ a.contact-item:hover { transform: translateX(8px); box-shadow: var(--shadow-md);
 
     /* Portada en celular: video vertical a todo lo ancho */
     .hero { padding-bottom: 56px; }
-    .hero.hero-vertical { height: 100vh; height: 100svh; }
-    .hero.hero-vertical .hero-media { align-items: stretch; }
-    .hero.hero-vertical .hero-video { width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: none; mask-image: none; }
+    /* El video vertical tiene fondo vacío arriba y abajo: se recorta solo eso (proporción 9:10),
+       así el logo sale completo en cualquier celular, también en los bajos tipo iPhone SE. */
+    .hero.hero-vertical { justify-content: center; padding-top: var(--header-h); padding-bottom: 24px; }
+    .hero.hero-vertical .hero-media {
+        flex: none; margin: 0 auto; max-width: 100%; aspect-ratio: 9 / 10; width: auto;
+        /* Lo que quepa sin empujar el eslogan y el primer botón fuera de la pantalla */
+        height: min(111vw, 578px, calc(100svh - var(--header-h) - 250px));
+        min-height: 230px;
+    }
+    .hero.hero-vertical .hero-video { width: 100%; height: 100%; max-width: none; object-fit: cover; }
     .hero-cta { flex-direction: column; align-items: center; gap: 12px; }
     .btn-primary, .btn-secondary { padding: 14px 30px; font-size: 0.95rem; width: 100%; max-width: 300px; }
     .hero-badge { font-size: 0.75rem; padding: 7px 18px; margin-bottom: 12px; }
@@ -764,10 +817,17 @@ a.contact-item:hover { transform: translateX(8px); box-shadow: var(--shadow-md);
     .product-icon { width: 80px; height: 80px; }
     .product-icon i { font-size: 2rem; }
 
-    .service-tabs { gap: 12px; }
-    .service-tab { padding: 18px 14px; align-items: center; text-align: center; gap: 8px; }
-    .service-tab .service-name { font-size: 1rem; }
-    .service-panel { padding: 26px 20px; text-align: center; }
+    .service-box { grid-template-columns: 1fr; gap: 10px; }
+    .service-tab { flex-direction: row; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 14px; }
+    .service-tab:hover { transform: none; }
+    .service-tab i:not(.service-chev) { font-size: 1.3rem; width: 26px; text-align: center; }
+    .service-tab .service-name { font-size: 1.05rem; flex: 1; }
+    .service-tab .service-chev { display: inline-block; font-size: .9rem; transition: transform .3s ease; }
+    .service-tab[aria-selected="true"] .service-chev { transform: rotate(180deg); }
+    .service-panel { order: var(--panel-order, 1); margin: -2px 0 8px; padding: 24px 18px; text-align: center; border-radius: 16px; }
+    .service-image { order: -1; aspect-ratio: 16 / 10; }
+    .service-detail-num { display: none; }
+    .service-detail h3 { display: none; }
     .service-detail-num { font-size: 3rem; }
     .service-chips { justify-content: center; }
 
@@ -807,10 +867,22 @@ a.contact-item:hover { transform: translateX(8px); box-shadow: var(--shadow-md);
     .whatsapp-button { bottom: 16px; right: 16px; width: 52px; height: 52px; font-size: 1.8rem; }
 }
 
+/* Celular acostado: video a la izquierda, texto a la derecha, todo en una pantalla */
+@media (max-height: 520px) and (orientation: landscape) {
+    .hero { flex-direction: row; align-items: center; justify-content: center; gap: 24px; padding: calc(var(--header-h) + 8px) 24px 16px; }
+    .hero-media { flex: 0 0 auto; }
+    .hero-video { height: calc(100vh - var(--header-h) - 34px); height: calc(100svh - var(--header-h) - 34px); }
+    .hero-content { flex: 0 1 420px; padding: 0; margin: 0; }
+    .hero-title { font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 16px; }
+    .hero-badge { margin-bottom: 10px; }
+    .hero-cta { flex-direction: column; align-items: center; gap: 10px; }
+    .btn-primary, .btn-secondary { padding: 11px 26px; width: 100%; max-width: 280px; }
+    .scroll-indicator { display: none; }
+}
+
 @media (max-width: 576px) {
     .container { padding: 0 16px; }
-    .service-tabs { grid-template-columns: 1fr 1fr; }
-    .service-tab i { font-size: 1.4rem; }
+
     .gallery-filters { gap: 8px; }
     .filter-btn { padding: 9px 16px; font-size: .88rem; }
     .gallery-grid { grid-template-columns: 1fr; }
