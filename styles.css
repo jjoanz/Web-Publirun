@@ -303,15 +303,6 @@ section { padding: 100px 0; position: relative; }
 }
 .about-card-dots.top { top: 34px; left: 44px; color: var(--secondary-color); }
 .about-card-dots.bottom { bottom: 30px; right: 30px; color: rgba(255, 255, 255, 0.85); }
-.about-logo-float {
-    position: absolute; bottom: -30px; right: -20px;
-    background: var(--light-color);
-    padding: 22px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
-    animation: float 6s ease-in-out infinite;
-}
-.about-logo-float img { width: 120px; height: auto; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 /* ================================
@@ -605,8 +596,7 @@ section { padding: 100px 0; position: relative; }
 .about-insta-follow { background: var(--secondary-color); color: #fff; font-weight: 600; padding: 8px 18px; border-radius: 30px; font-size: .9rem; }
 .about-insta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .about-insta-grid .insta-post { border-radius: 10px; }
-.about-visual.with-insta .about-logo-float { display: none; }
-
+.about-visual.with-insta
 /* ================================
    INSTAGRAM
    ================================ */
@@ -768,7 +758,6 @@ a.contact-item:hover { transform: translateX(8px); box-shadow: var(--shadow-md);
     .whatsapp { display: none; }
 
     .about-content, .contact-content { grid-template-columns: 1fr; gap: 50px; }
-    .about-logo-float { right: 10px; }
     .service-panel { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
 }
 
@@ -809,8 +798,6 @@ a.contact-item:hover { transform: translateX(8px); box-shadow: var(--shadow-md);
     .about-card-dots { width: 160px; height: 44px; }
     .about-card-dots.top { top: 22px; left: 50%; transform: translateX(-50%); }
     .about-card-dots.bottom { bottom: 20px; right: 50%; transform: translateX(50%); }
-    .about-logo-float { position: static; width: max-content; margin: -40px auto 0; animation: none; padding: 16px; }
-    .about-logo-float img { width: 90px; }
 
     .products-grid { grid-template-columns: 1fr; gap: 22px; }
     .product-card { padding: 34px 24px; }
