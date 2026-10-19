@@ -430,7 +430,7 @@
         "image": "/media/cliente-urban-group-3534521b-1600.webp"
       }
     ],
-    "style": "cartel"
+    "style": "circulos"
   },
   "instagram": {
     "visible": false,
@@ -451,7 +451,7 @@
     "copyright": "© {año} Publirun. Todos los derechos reservados."
   },
   "meta": {
-    "updatedAt": "2026-10-19T01:40:33.008Z",
+    "updatedAt": "2026-10-19T01:43:52.372Z",
     "updatedBy": "jjoanz0618@gmail.com"
   }
 }
