@@ -355,79 +355,79 @@
     "logos": [
       {
         "name": "Prodesa",
-        "image": "/media/cliente-prodesa-1600.webp"
+        "image": "/media/cliente-prodesa-6265bbe0-1600.webp"
       },
       {
         "name": "Casa de España",
-        "image": "/media/cliente-casa-espana-1600.webp"
+        "image": "/media/cliente-casa-de-espana-a3f45789-1600.webp"
       },
       {
         "name": "Chef",
-        "image": "/media/cliente-chef-1600.webp"
+        "image": "/media/cliente-chef-8bf4ca33-1600.webp"
       },
       {
         "name": "Acrópolis",
-        "image": "/media/cliente-acropolis-1600.webp"
+        "image": "/media/cliente-acropolis-089f6b4a-1600.webp"
       },
       {
         "name": "Hired Experts",
-        "image": "/media/cliente-hired-experts-1600.webp"
+        "image": "/media/cliente-hired-experts-b07faa5b-1600.webp"
       },
       {
         "name": "Initium",
-        "image": "/media/cliente-initium-1600.webp"
+        "image": "/media/cliente-initium-bd157212-1600.webp"
       },
       {
         "name": "AC Hotels Marriott",
-        "image": "/media/cliente-ac-hotels-1600.webp"
+        "image": "/media/cliente-ac-hotels-marriott-0adfdebd-1600.webp"
       },
       {
         "name": "Gatorade",
-        "image": "/media/cliente-gatorade-1600.webp"
+        "image": "/media/cliente-gatorade-aa8a952e-1600.webp"
       },
       {
         "name": "Constructora Santana Medrano",
-        "image": "/media/cliente-santana-medrano-1600.webp"
+        "image": "/media/cliente-constructora-santana-medrano-21ec2466-1600.webp"
       },
       {
         "name": "Casaducho",
-        "image": "/media/cliente-casaducho-1600.webp"
+        "image": "/media/cliente-casaducho-70e0068d-1600.webp"
       },
       {
         "name": "Asociación La Nacional",
-        "image": "/media/cliente-la-nacional-1600.webp"
+        "image": "/media/cliente-asociacion-la-nacional-98b2a824-1600.webp"
       },
       {
         "name": "Making Waves",
-        "image": "/media/cliente-making-waves-1600.webp"
+        "image": "/media/cliente-making-waves-daafb38e-1600.webp"
       },
       {
         "name": "Hidrolágeno",
-        "image": "/media/cliente-hidrolageno-1600.webp"
+        "image": "/media/cliente-hidrolageno-32aeb5a5-1600.webp"
       },
       {
         "name": "Invita Energy",
-        "image": "/media/cliente-invita-1600.webp"
+        "image": "/media/cliente-invita-energy-fbb5244d-1600.webp"
       },
       {
         "name": "YAO",
-        "image": "/media/cliente-yao-1600.webp"
+        "image": "/media/cliente-yao-8d84a425-1600.webp"
       },
       {
         "name": "Paseo del Sendero",
-        "image": "/media/cliente-paseo-sendero-1600.webp"
+        "image": "/media/cliente-paseo-del-sendero-fb20a0cb-1600.webp"
       },
       {
         "name": "Petronan",
-        "image": "/media/cliente-petronan-1600.webp"
+        "image": "/media/cliente-petronan-2850af2b-1600.webp"
       },
       {
         "name": "Instituto Cultural Domínico Americano",
-        "image": "/media/cliente-dominico-americano-1600.webp"
+        "image": "/media/cliente-instituto-cultural-dominico-amer-58e0cde7-1600.webp"
       },
       {
         "name": "Urban Group",
-        "image": "/media/cliente-urban-group-1600.webp"
+        "image": "/media/cliente-urban-group-3534521b-1600.webp"
       }
     ],
     "style": "cartel"
@@ -451,7 +451,7 @@
     "copyright": "© {año} Publirun. Todos los derechos reservados."
   },
   "meta": {
-    "updatedAt": "2026-10-19T01:20:12.857Z",
+    "updatedAt": "2026-10-19T01:40:33.008Z",
     "updatedBy": "jjoanz0618@gmail.com"
   }
 }

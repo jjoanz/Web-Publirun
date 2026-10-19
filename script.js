@@ -262,7 +262,7 @@ function renderLogoPages(logos, root) {
         page = Math.min(page, count - 1);
         root.style.setProperty('--logo-cols', cols);
         root.innerHTML = `<div class="logo-viewport"><div class="logo-strip">${Array.from({ length: count }, (_, p) =>
-            `<ul class="logo-page">${logos.slice(p * per, p * per + per).map(l => `<li>${img(l.image, l.name, { sizes: '180px' })}</li>`).join('')}</ul>`).join('')}</div></div>` +
+            `<ul class="logo-page">${logos.slice(p * per, p * per + per).map(l => `<li><img src="${escapeHtml(media(l.image))}" alt="${escapeHtml(l.name)}" loading="lazy" decoding="async"></li>`).join('')}</ul>`).join('')}</div></div>` +
             (count > 1 ? `<div class="logo-dots">${Array.from({ length: count }, (_, p) => `<button aria-label="Página ${p + 1} de clientes" data-p="${p}"></button>`).join('')}</div>` : '');
         go(page);
     };
